@@ -27,11 +27,6 @@ import java.util.Random;
 public class EncryptUtil {
     private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
 
-    public static void main(String[] args) {
-        String abc = encryptByAES("123", "abc");
-        System.out.println(abc);
-    }
-
     /**
      * AES加密
      *
