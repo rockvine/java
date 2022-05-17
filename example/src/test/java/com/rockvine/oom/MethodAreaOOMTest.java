@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
  * @date 2022-05-17 23:21
  * @description 方法区溢出
  */
+@SuppressWarnings("all")
 public class MethodAreaOOMTest {
 
     /*

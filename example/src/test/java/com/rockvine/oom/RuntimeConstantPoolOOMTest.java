@@ -8,6 +8,7 @@ import java.util.List;
  * @date 2022-05-17 23:18
  * @description 运行时常量池溢出
  */
+@SuppressWarnings("all")
 public class RuntimeConstantPoolOOMTest {
 
     /*

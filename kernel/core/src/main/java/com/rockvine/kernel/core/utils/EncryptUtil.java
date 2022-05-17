@@ -24,6 +24,7 @@ import java.util.Random;
  * @date 2022-02-13 13:52
  * @description 加密工具类
  */
+@SuppressWarnings("unused")
 public class EncryptUtil {
     private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
 
@@ -251,6 +252,7 @@ public class EncryptUtil {
         }
     }
 
+    @SuppressWarnings("all")
     private static String md5(String data) {
         String encStr = null;
         try {
@@ -288,7 +290,7 @@ public class EncryptUtil {
 
     private static String bytesToHex3(byte[] bytes) {
         StringBuilder hexValue = new StringBuilder();
-        String tmp = null;
+        String tmp;
         for (byte b : bytes) {
             tmp = (Integer.toHexString(b & 0xFF));
             if (tmp.length() == 1) {

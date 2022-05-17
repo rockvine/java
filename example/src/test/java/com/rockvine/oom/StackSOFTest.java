@@ -5,6 +5,7 @@ package com.rockvine.oom;
  * @date 2022-05-17 22:53
  * @description 栈溢出
  */
+@SuppressWarnings("all")
 public class StackSOFTest {
 
     /*

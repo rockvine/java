@@ -8,6 +8,7 @@ import java.util.List;
  * @date 2022-05-17 23:09
  * @description 堆溢出
  */
+@SuppressWarnings("all")
 public class HeapOOMTest {
 
     /*

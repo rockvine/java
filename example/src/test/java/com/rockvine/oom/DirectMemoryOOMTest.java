@@ -16,6 +16,7 @@ public class DirectMemoryOOMTest {
         testDirectMemoryOOM();
     }
 
+    @SuppressWarnings("unused")
     private static void testDirectMemoryOOM() {
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(12*1024*1024);
     }

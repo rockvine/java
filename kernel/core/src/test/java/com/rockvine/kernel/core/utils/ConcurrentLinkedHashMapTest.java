@@ -40,6 +40,7 @@ public class ConcurrentLinkedHashMapTest extends BaseTest {
         map.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 
+    @SuppressWarnings("all")
     private static void testConcurrentLinkedHashMap2() {
         EvictionListener<String, String> listener = new EvictionListener<String, String>() {
             @Override
