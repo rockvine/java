@@ -17,6 +17,7 @@
 
     <modules>
         <module>kernel</module>
+        <module>jvm</module>
         <module>example</module>
     </modules>
 

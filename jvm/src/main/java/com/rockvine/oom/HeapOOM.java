@@ -9,8 +9,7 @@ import java.util.List;
  * @description 堆溢出
  */
 @SuppressWarnings("all")
-public class HeapOOMTest {
-
+public class HeapOOM {
     /*
      * JVM参数配置：-Xms5m -Xmx5m -XX:+PrintGC
      */

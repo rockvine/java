@@ -9,8 +9,7 @@ import java.util.List;
  * @description 运行时常量池溢出
  */
 @SuppressWarnings("all")
-public class RuntimeConstantPoolOOMTest {
-
+public class RuntimeConstantPoolOOM {
     /*
      * JVM参数配置：-Xmx5m
      */

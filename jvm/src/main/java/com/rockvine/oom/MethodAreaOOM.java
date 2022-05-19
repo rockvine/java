@@ -12,8 +12,7 @@ import java.lang.reflect.Method;
  * @description 方法区溢出
  */
 @SuppressWarnings("all")
-public class MethodAreaOOMTest {
-
+public class MethodAreaOOM {
     /*
      * JVM参数配置：-XX:MaxMetaspaceSize=10m
      */

@@ -7,8 +7,7 @@ import java.nio.ByteBuffer;
  * @date 2022-05-17 23:25
  * @description 直接内存溢出
  */
-public class DirectMemoryOOMTest {
-
+public class DirectMemoryOOM {
     /*
      * JVM参数配置：-XX:MacDirectMemorySize=10m
      */
