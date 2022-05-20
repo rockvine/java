@@ -24,7 +24,6 @@ import java.util.Random;
  * @date 2022-02-13 13:52
  * @description 加密工具类
  */
-@SuppressWarnings("unused")
 public class EncryptUtil {
     private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
 
@@ -252,7 +251,6 @@ public class EncryptUtil {
         }
     }
 
-    @SuppressWarnings("all")
     private static String md5(String data) {
         String encStr = null;
         try {

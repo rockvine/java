@@ -5,7 +5,7 @@ import com.rockvine.kernel.core.BaseTest;
 /**
  * @author rocky
  * @date 2022-05-17 22:04
- * @description
+ * @description 加密工具类测试类
  */
 public class EncryptUtilTest extends BaseTest {
 

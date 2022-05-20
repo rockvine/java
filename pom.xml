@@ -18,6 +18,7 @@
     <modules>
         <module>kernel</module>
         <module>jvm</module>
+        <module>concurrency</module>
         <module>example</module>
     </modules>
 
@@ -26,22 +27,15 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <cglib.version>3.2.5</cglib.version>
-
         <!--工具类依赖-->
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-codec.version>1.15</commons-codec.version>
         <concurrentlinkedhashmap-lru.version>1.4.2</concurrentlinkedhashmap-lru.version>
+        <fastjson.version>1.2.70</fastjson.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>${cglib.version}</version>
-            </dependency>
-
             <!--工具类依赖-->
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -57,6 +51,11 @@
                 <groupId>com.googlecode.concurrentlinkedhashmap</groupId>
                 <artifactId>concurrentlinkedhashmap-lru</artifactId>
                 <version>${concurrentlinkedhashmap-lru.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

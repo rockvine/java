@@ -3,14 +3,13 @@ package com.rockvine.kernel.core.utils;
 import com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap;
 import com.googlecode.concurrentlinkedhashmap.EvictionListener;
 import com.googlecode.concurrentlinkedhashmap.Weighers;
-import com.rockvine.kernel.core.BaseTest;
 
 /**
  * @author rocky
  * @date 2022-02-13 13:54
- * @description
+ * @description ConcurrentLinkedHashMap测试类
  */
-public class ConcurrentLinkedHashMapTest extends BaseTest {
+public class ConcurrentLinkedHashMapTest {
 
     public static void main(String[] args) {
         testConcurrentLinkedHashMap1();

@@ -8,7 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 /**
  * @author rocky
  * @date 2022-02-13 13:47
- * @description
+ * @description 基础测试类
  */
 @SpringBootTest(classes = Application.class)
 @RunWith(SpringRunner.class)
