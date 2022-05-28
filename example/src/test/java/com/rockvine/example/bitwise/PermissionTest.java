@@ -1,6 +1,4 @@
-package com.rockvine.bitwise;
-
-import com.rockvine.example.bitwise.Permission;
+package com.rockvine.example.bitwise;
 
 /**
  * @author rocky

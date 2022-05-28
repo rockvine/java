@@ -1,4 +1,4 @@
-package com.rockvine.jvm.loader;
+package com.rockvine.jvm.classloader;
 
 /**
  * @author rocky
@@ -13,7 +13,7 @@ public class App {
         MyClassLoader myClassLoader = new MyClassLoader();
         myClassLoader.setBasePath(basePath);
 
-        Class<?> clazz = myClassLoader.findClass("com.rockvine.loader.User");
+        Class<?> clazz = myClassLoader.findClass("com.rockvine.jvm.classloader.User");
         System.out.println(clazz.getClassLoader());
 
         Object o = clazz.newInstance();

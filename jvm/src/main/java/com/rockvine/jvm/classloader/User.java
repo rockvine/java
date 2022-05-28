@@ -1,4 +1,4 @@
-package com.rockvine.jvm.loader;
+package com.rockvine.jvm.classloader;
 
 import com.rockvine.kernel.core.model.BaseModel;
 

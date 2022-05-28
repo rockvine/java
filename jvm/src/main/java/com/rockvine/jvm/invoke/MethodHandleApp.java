@@ -1,4 +1,4 @@
-package com.rockvine.jvm.method;
+package com.rockvine.jvm.invoke;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -9,7 +9,7 @@ import java.lang.invoke.MethodType;
  * @date 2022-05-18 13:34
  * @description 方法句柄
  */
-public class MethodHandleDemo {
+public class MethodHandleApp {
     static class Dog {
         protected String sayHello() {
             return "Woof Woof...";
@@ -41,8 +41,8 @@ public class MethodHandleDemo {
     }
 
     public static void main(String[] args) throws Throwable {
-        System.out.println(MethodHandleDemo.sayHello(new Dog()));
-        System.out.println(MethodHandleDemo.sayHello(new Human()));
-        System.out.println(MethodHandleDemo.sayHello(new Man()));
+        System.out.println(MethodHandleApp.sayHello(new Dog()));
+        System.out.println(MethodHandleApp.sayHello(new Human()));
+        System.out.println(MethodHandleApp.sayHello(new Man()));
     }
 }

@@ -21,7 +21,7 @@ class DeadLock {
             System.out.println(Thread.currentThread().getName() + "拿到了a锁，准备拿b锁...");
 
             try {
-                Thread.sleep(100);  //休眠100毫秒，让ba方法有机会拿到b锁
+                Thread.sleep(100);      // 休眠100毫秒，让ba方法有机会拿到b锁
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

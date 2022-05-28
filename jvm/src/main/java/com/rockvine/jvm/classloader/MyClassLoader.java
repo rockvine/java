@@ -1,4 +1,4 @@
-package com.rockvine.jvm.loader;
+package com.rockvine.jvm.classloader;
 
 import java.io.File;
 
