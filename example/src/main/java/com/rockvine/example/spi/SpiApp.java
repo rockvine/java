@@ -10,7 +10,7 @@ import java.util.ServiceLoader;
  * @date 2022-05-17 13:16
  * @description Java SPI机制
  */
-@SuppressWarnings("all")
+@SuppressWarnings("WhileLoopReplaceableByForEach")
 public class SpiApp {
     public static void main(String[] args) {
         ServiceLoader<SpiDemoService> services = ServiceLoader.load(SpiDemoService.class);

@@ -5,7 +5,7 @@ package com.rockvine.concurrency.thread.deamon;
  * @date 2022-05-25 16:39
  * @description 守护线程
  */
-@SuppressWarnings("all")
+@SuppressWarnings("Convert2Lambda")
 public class App {
     public static void main(String[] args) {
         Thread thread = new Thread(new Runnable() {

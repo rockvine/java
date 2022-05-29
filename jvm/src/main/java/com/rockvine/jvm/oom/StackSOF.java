@@ -28,7 +28,7 @@ public class StackSOF {
         }
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings("InfiniteRecursion")
     private void stackLeak1(){
         stackLength++;
         stackLeak1();
@@ -46,7 +46,7 @@ public class StackSOF {
         }
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings("InfiniteRecursion")
     private void stackLeak2(String arg1, String arg2) {
         stackLength++;
         stackLeak2(arg1, arg2);

@@ -30,9 +30,9 @@ public class EncryptUtil {
     /**
      * AES加密
      *
-     * @param data  明文
-     * @param key   密钥
-     * @return      密文
+     * @param data 明文
+     * @param key  密钥
+     * @return 密文
      */
     public static String encryptByAES(String data, String key) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(key)) {
@@ -68,9 +68,9 @@ public class EncryptUtil {
     /**
      * AES解密
      *
-     * @param encryptData   密文
-     * @param key           密钥
-     * @return              明文
+     * @param encryptData 密文
+     * @param key         密钥
+     * @return 明文
      */
     public static String decryptByAES(String encryptData, String key) {
         if (StringUtils.isBlank(encryptData) || StringUtils.isBlank(key)) {
@@ -143,9 +143,9 @@ public class EncryptUtil {
     /**
      * 签名
      *
-     * @param data  数据
-     * @param key   密钥
-     * @return      签名
+     * @param data 数据
+     * @param key  密钥
+     * @return 签名
      */
     public static String sign(String data, String key) {
         // 构建AES密钥
@@ -175,8 +175,8 @@ public class EncryptUtil {
      *
      * @param data      数据
      * @param key       密钥
-     * @param signature     需校验的签名
-     * @return              校验结果
+     * @param signature 需校验的签名
+     * @return 校验结果
      */
     public static boolean verifySign(String data, String key, String signature) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(key) || StringUtils.isBlank(signature)) {
@@ -188,8 +188,8 @@ public class EncryptUtil {
     /**
      * MD5加密
      *
-     * @param data  明文
-     * @return      密文
+     * @param data 明文
+     * @return 密文
      */
     public static String encryptByMD5(String data) {
         if (StringUtils.isBlank(data)) {
@@ -226,9 +226,9 @@ public class EncryptUtil {
     /**
      * MD5加密校验
      *
-     * @param data      明文
-     * @param encryptData    密文
-     * @return          校验结果
+     * @param data        明文
+     * @param encryptData 密文
+     * @return 校验结果
      */
     public static boolean verifyMD5(String data, String encryptData) {
         if (StringUtils.isBlank(data) || StringUtils.isBlank(encryptData)) {
@@ -302,9 +302,9 @@ public class EncryptUtil {
     /**
      * 自定义加密
      *
-     * @param data  明文
-     * @param key   密钥
-     * @return      密文
+     * @param data 明文
+     * @param key  密钥
+     * @return 密文
      */
     public static String encrypt(String data, String key) {
         if (StringUtils.isBlank(data)) {
@@ -317,8 +317,8 @@ public class EncryptUtil {
      * 自定义加密
      * 先将data进行一次MD5加密，加密后再取加密后的字符串的第1、3、5个字符追加到加密串，再拿这个加密串进行加密
      *
-     * @param data  明文
-     * @return      密文
+     * @param data 明文
+     * @return 密文
      */
     public static String encrypt(String data) {
         if (StringUtils.isBlank(data)) {

@@ -25,6 +25,7 @@ public class BaseResult extends AbstractPersistable {
 
     /**
      * 构建请求成功结果
+     *
      * @return 返回结果
      */
     public static BaseResult buildSuccessResult() {
@@ -35,6 +36,7 @@ public class BaseResult extends AbstractPersistable {
 
     /**
      * 构建请求失败的结果
+     *
      * @param errorCode 错误码
      * @param errorMsg  错误信息
      * @return  返回结果

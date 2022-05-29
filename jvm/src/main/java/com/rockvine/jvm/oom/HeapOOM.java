@@ -22,7 +22,7 @@ public class HeapOOM {
         String[] arr = new String[6*1024*1024];    // 6m
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     private static void testHeapOOM2() {
         List<Object> list = new ArrayList<>();
         while (true){

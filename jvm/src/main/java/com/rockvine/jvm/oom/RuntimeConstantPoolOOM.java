@@ -16,7 +16,7 @@ public class RuntimeConstantPoolOOM {
         testRuntimeConstantPoolOOM();
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings({"MismatchedQueryAndUpdateOfCollection", "InfiniteLoopStatement"})
     private static void testRuntimeConstantPoolOOM() {
         List<String> list = new ArrayList<>();
         int i = 0;

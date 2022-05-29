@@ -5,7 +5,7 @@ package com.rockvine.concurrency.thread.join;
  * @date 2022-05-20 18:57
  * @description join方法示例
  */
-@SuppressWarnings("all")
+@SuppressWarnings("Convert2Lambda")
 public class App {
     public static void main(String[] args) throws Exception {
         Thread thread = new Thread(new Runnable() {

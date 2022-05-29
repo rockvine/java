@@ -36,6 +36,7 @@ public class PageResult<T extends BaseModel> extends BaseResult {
 
     /**
      * 构建请求成功结果
+     *
      * @param list 处理结果
      * @param <T>   结果类型
      * @return  返回结果
@@ -48,6 +49,7 @@ public class PageResult<T extends BaseModel> extends BaseResult {
 
     /**
      * 构建请求失败的结果
+     *
      * @param errorCodeEnum 错误码
      * @return 返回结果
      */

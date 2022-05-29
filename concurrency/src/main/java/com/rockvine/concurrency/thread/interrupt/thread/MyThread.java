@@ -5,7 +5,7 @@ package com.rockvine.concurrency.thread.interrupt.thread;
  * @date 2022-05-28 18:57
  * @description 线程中止测试
  */
-@SuppressWarnings("all")
+@SuppressWarnings("BusyWait")
 class MyThread extends Thread {
     @Override
     public void run() {

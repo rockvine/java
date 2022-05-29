@@ -32,7 +32,7 @@ public class MethodAreaOOM {
         testMethodAreaOOM();
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings("InfiniteLoopStatement")
     private static void testMethodAreaOOM() {
         while (true) {
             Enhancer enhancer = new Enhancer();

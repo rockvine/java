@@ -39,7 +39,7 @@ public class ConcurrentLinkedHashMapTest {
         map.forEach((k, v) -> System.out.println(k + ": " + v));
     }
 
-    @SuppressWarnings("all")
+    @SuppressWarnings("Convert2Lambda")
     private static void testConcurrentLinkedHashMap2() {
         EvictionListener<String, String> listener = new EvictionListener<String, String>() {
             @Override
