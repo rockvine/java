@@ -1,4 +1,4 @@
-package com.rockvine.kernel.core.utils;
+package com.rockvine.kernel.core.util;
 
 import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.lang3.StringUtils;
@@ -24,8 +24,8 @@ import java.util.Random;
  * @date 2022-02-13 13:52
  * @description 加密工具类
  */
-public class EncryptUtil {
-    private static final Logger logger = LoggerFactory.getLogger(EncryptUtil.class);
+public class EncryptUtils {
+    private static final Logger logger = LoggerFactory.getLogger(EncryptUtils.class);
 
     /**
      * AES加密

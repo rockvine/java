@@ -1,4 +1,4 @@
-package com.rockvine.kernel.core.utils;
+package com.rockvine.kernel.core.util;
 
 import com.googlecode.concurrentlinkedhashmap.ConcurrentLinkedHashMap;
 import com.googlecode.concurrentlinkedhashmap.EvictionListener;

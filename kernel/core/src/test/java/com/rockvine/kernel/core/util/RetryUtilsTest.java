@@ -1,4 +1,4 @@
-package com.rockvine.kernel.core.utils;
+package com.rockvine.kernel.core.util;
 
 import com.google.common.collect.Lists;
 import org.apache.commons.lang3.StringUtils;
@@ -10,7 +10,7 @@ import java.util.concurrent.*;
  * @date 2022-05-29 15:50
  * @description 重试工具类测试类
  */
-public class RetryUtilTest {
+public class RetryUtilsTest {
     public static void main(String[] args) throws Exception {
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(2, 4, 3, TimeUnit.SECONDS,
                 new ArrayBlockingQueue<>(10), new ThreadPoolExecutor.AbortPolicy());
@@ -18,31 +18,31 @@ public class RetryUtilTest {
 
         MyRunnable runnable = new MyRunnable();
 
-        RetryUtil.RetryPolicy runnablePolicy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+        RetryUtils.RetryPolicy runnablePolicy = RetryUtils.RetryPolicyBuilder.newRetryPolicy()
                 .retryTimes(2)
                 .sleepTimeInMillis(1000)
                 .exponential(false)
                 .build();
 
-        RetryUtil.executeWithRetry(runnable, runnablePolicy);
+        RetryUtils.executeWithRetry(runnable, runnablePolicy);
 
-        RetryUtil.asyncExecuteWithRetry(runnable, runnablePolicy, 2000, threadPoolExecutor);
+        RetryUtils.asyncExecuteWithRetry(runnable, runnablePolicy, 2000, threadPoolExecutor);
 
 
         MyCallable callable = new MyCallable();
 
         // noinspection unchecked
-        RetryUtil.RetryPolicy callablePolicy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+        RetryUtils.RetryPolicy callablePolicy = RetryUtils.RetryPolicyBuilder.newRetryPolicy()
                 .retryTimes(2)
                 .sleepTimeInMillis(100)
                 .exponential(true)
                 .retryExceptionClassList(Lists.newArrayList(ArithmeticException.class))
                 .build();
 
-        String result1 = RetryUtil.executeWithRetry(callable, runnablePolicy, StringUtils::isBlank);
+        String result1 = RetryUtils.executeWithRetry(callable, runnablePolicy, StringUtils::isBlank);
         System.out.println(result1);
 
-        String result2 = RetryUtil.asyncExecuteWithRetry(callable, callablePolicy, null, 1000, threadPoolExecutor);
+        String result2 = RetryUtils.asyncExecuteWithRetry(callable, callablePolicy, null, 1000, threadPoolExecutor);
         System.out.println(result2);
     }
 

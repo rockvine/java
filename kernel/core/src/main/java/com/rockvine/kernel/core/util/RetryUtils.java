@@ -1,6 +1,7 @@
-package com.rockvine.kernel.core.utils;
+package com.rockvine.kernel.core.util;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,8 +16,8 @@ import java.util.function.Predicate;
  * @date 2022-05-28 19:43
  * @description 重试工具类
  */
-public class RetryUtil {
-    private static final Logger logger = LoggerFactory.getLogger(RetryUtil.class);
+public class RetryUtils {
+    private static final Logger logger = LoggerFactory.getLogger(RetryUtils.class);
     /**
      * 默认重试次数
      */
@@ -34,11 +35,10 @@ public class RetryUtil {
      * 调用runnable方法失败重试
      *
      * @param runnable 实际业务逻辑
-     * @param <T>      结果类型（runnable无需关心）
      * @throws Exception 抛出异常
      */
-    public static <T> void executeWithRetry(Runnable runnable) throws Exception {
-        new Retry<T>().doRetry(runnable, RetryPolicyBuilder.newRetryPolicy().build());
+    public static void executeWithRetry(Runnable runnable) throws Exception {
+        executeWithRetry(runnable, RetryPolicyBuilder.newRetryPolicy().build());
     }
 
     /**
@@ -48,10 +48,9 @@ public class RetryUtil {
      * @param retryTimes        最大重试次数（强制>=1）
      * @param sleepTimeInMillis 调用失败后休眠对应时间再进行重试
      * @param exponential       休眠时间是否指数递增
-     * @param <T>               返回结果类型（runnable无需关心）
      * @throws Exception 抛出异常
      */
-    public static <T> void executeWithRetry(Runnable runnable, int retryTimes, long sleepTimeInMillis, boolean exponential) throws Exception {
+    public static void executeWithRetry(Runnable runnable, int retryTimes, long sleepTimeInMillis, boolean exponential) throws Exception {
         RetryPolicy policy = RetryPolicyBuilder.newRetryPolicy()
                 .retryTimes(retryTimes)
                 .sleepTimeInMillis(sleepTimeInMillis)
@@ -61,8 +60,23 @@ public class RetryUtil {
     }
 
     /**
+     * 调用runnable方法失败重试，需指定无需重试异常
+     *
+     * @param runnable       实际业务逻辑
+     * @param abortException 无需重试异常
+     * @throws Exception 抛出异常
+     */
+    @SuppressWarnings("unchecked")
+    public static void executeWithRetry(Runnable runnable, Class<? extends Exception> abortException) throws Exception {
+        RetryPolicy policy = RetryPolicyBuilder.newRetryPolicy()
+                .abortExceptionClassList(Lists.newArrayList(abortException))
+                .build();
+        executeWithRetry(runnable, policy);
+    }
+
+    /**
      * 调用runnable方法失败重试，需指定重试策略RetryPolicy
-     * 获取方式：RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+     * RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
      * .xxx // 函数式指定重试策略
      * .build();
      *
@@ -76,7 +90,10 @@ public class RetryUtil {
     }
 
     /**
-     * 使用线程池调用runnable方法失败重试，指定方法执行超时时间，超时即失败重试
+     * 使用线程池调用runnable方法失败重试，指定重试策略RetryPolicy、线程池、方法执行超时时间，超时即失败重试
+     * RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+     * .xxx // 函数式指定重试策略
+     * .build();
      *
      * @param runnable           实际业务逻辑
      * @param policy             重试策略
@@ -99,7 +116,7 @@ public class RetryUtil {
      * @throws Exception 抛出异常
      */
     public static <T> T executeWithRetry(Callable<T> callable) throws Exception {
-        return new Retry<T>().doRetry(callable, RetryPolicyBuilder.newRetryPolicy().build());
+        return executeWithRetry(callable, RetryPolicyBuilder.newRetryPolicy().build());
     }
 
     /**
@@ -123,8 +140,25 @@ public class RetryUtil {
     }
 
     /**
+     * 调用callable方法失败重试，需指定无需重试异常
+     *
+     * @param callable       实际业务逻辑
+     * @param abortException 无需重试异常
+     * @param <T>            返回结果类型
+     * @return 返回结果
+     * @throws Exception 抛出异常
+     */
+    @SuppressWarnings("unchecked")
+    public static <T> T executeWithRetry(Callable<T> callable, Class<? extends Exception> abortException) throws Exception {
+        RetryPolicy policy = RetryPolicyBuilder.newRetryPolicy()
+                .abortExceptionClassList(Lists.newArrayList(abortException))
+                .build();
+        return executeWithRetry(callable, policy);
+    }
+
+    /**
      * 调用callable方法失败重试，需指定重试策略RetryPolicy
-     * 获取方式：RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+     * RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
      * .xxx // 函数式指定重试策略
      * .build();
      *
@@ -166,7 +200,7 @@ public class RetryUtil {
 
     /**
      * 调用callable方法失败重试，需指定重试策略RetryPolicy，及返回结果重试断言
-     * 获取方式：RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+     * RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
      * .xxx // 函数式指定重试策略
      * .build();
      *
@@ -183,7 +217,7 @@ public class RetryUtil {
 
     /**
      * 调用callable方法失败重试，需指定重试策略RetryPolicy，及返回结果重试断言集合
-     * 获取方式：RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
+     * RetryUtil.RetryPolicy policy = RetryUtil.RetryPolicyBuilder.newRetryPolicy()
      * .xxx // 函数式指定重试策略
      * .build();
      *
@@ -244,7 +278,7 @@ public class RetryUtil {
          * @return 重试类Retry
          */
         protected Retry<T> addPredicateList(Predicate<T> predicate) {
-            if (null == predicate) {
+            if (predicate == null) {
                 return this;
             }
             if (CollectionUtils.isEmpty(predicateList)) {
@@ -262,7 +296,7 @@ public class RetryUtil {
          * @throws Exception 抛出异常
          */
         public void doRetry(Runnable runnable, RetryPolicy policy) throws Exception {
-            if (null == runnable) {
+            if (runnable == null) {
                 throw new IllegalArgumentException("runnable can not be null");
             }
             doRetry(null, runnable, policy);
@@ -277,7 +311,7 @@ public class RetryUtil {
          * @throws Exception 抛出异常
          */
         public T doRetry(Callable<T> callable, RetryPolicy policy) throws Exception {
-            if (null == callable) {
+            if (callable == null) {
                 throw new IllegalArgumentException("callable can not be null");
             }
             return doRetry(callable, null, policy);
@@ -297,7 +331,7 @@ public class RetryUtil {
             Exception exception = null;
             for (int i = 0; i <= policy.retryTimes; i++) {
                 try {
-                    if (null != callable) {
+                    if (callable != null) {
                         T result = call(callable);
                         if (isInRetryResultConditionList(result, predicateList)) {
                             throw new RuntimeException("方法返回结果存在返回结果重试断言集合中，本次结果作废，返回结果：" + JSON.toJSONString(result));
@@ -311,14 +345,15 @@ public class RetryUtil {
                     exception = e;
                     logger.warn("throw exception, message:{}", e.getMessage(), e);
 
+                    // 判断抛出的异常是否存在重试异常列表中
                     if (!isInRetryExceptionClassList(exception, policy.retryExceptionClassList)) {
                         throw exception;
                     }
-
+                    // 判断抛出的异常是否存在无需重试异常列表中
                     if (isInAbortExceptionClassList(exception, policy.abortExceptionClassList)) {
                         throw exception;
                     }
-
+                    // 重试休眠时间处理
                     long sleepTimeInMillis = policy.sleepTimeInMillis;
                     if (policy.exponential) {
                         sleepTimeInMillis = Math.min(sleepTimeInMillis * (long) Math.pow(2, i), MAX_SLEEP_TIME_IN_MILLISECOND);
@@ -465,7 +500,7 @@ public class RetryUtil {
     /**
      * 重试策略
      */
-    static class RetryPolicy {
+    public static final class RetryPolicy {
         /**
          * 重试次数，默认重试2次
          */
@@ -499,7 +534,7 @@ public class RetryUtil {
     /**
      * 重试策略建造者
      */
-    static final class RetryPolicyBuilder {
+    public static final class RetryPolicyBuilder {
         private final RetryPolicy retryPolicy;
 
         private RetryPolicyBuilder() {

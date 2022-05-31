@@ -1,4 +1,4 @@
-package com.rockvine.kernel.core.utils;
+package com.rockvine.kernel.core.util;
 
 import com.rockvine.kernel.core.BaseTest;
 
@@ -7,7 +7,7 @@ import com.rockvine.kernel.core.BaseTest;
  * @date 2022-05-17 22:04
  * @description 加密工具类测试类
  */
-public class EncryptUtilTest extends BaseTest {
+public class EncryptUtilsTest extends BaseTest {
 
     public static void main(String[] args) {
         testEncryptByAES();
@@ -17,10 +17,10 @@ public class EncryptUtilTest extends BaseTest {
         String key = "admin123456";
         String str = "hello world";
 
-        String encryptData = EncryptUtil.encryptByAES(str, key);
+        String encryptData = EncryptUtils.encryptByAES(str, key);
         System.out.println(encryptData);
 
-        String data = EncryptUtil.decryptByAES(encryptData, key);
+        String data = EncryptUtils.decryptByAES(encryptData, key);
         System.out.println(data);
     }
 }
