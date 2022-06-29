@@ -254,7 +254,7 @@ public class RetryUtils {
     /**
      * 重试工具类具体实现逻辑
      */
-    static class Retry<T> {
+    private static class Retry<T> {
         /**
          * 返回结果重试断言集合
          */

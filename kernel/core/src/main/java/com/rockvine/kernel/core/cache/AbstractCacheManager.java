@@ -20,7 +20,7 @@ import java.util.function.Function;
 /**
  * @author rocky
  * @date 2022-05-30 17:51
- * @description 抽象缓存工具类
+ * @description 抽象缓存管理类
  */
 @Component
 public abstract class AbstractCacheManager {

@@ -19,6 +19,7 @@
         <module>kernel</module>
         <module>jvm</module>
         <module>concurrency</module>
+        <module>algorithm</module>
         <module>example</module>
     </modules>
 
@@ -37,6 +38,7 @@
         <guava.version>19.0</guava.version>
         <concurrentlinkedhashmap-lru.version>1.4.2</concurrentlinkedhashmap-lru.version>
         <fastjson.version>1.2.70</fastjson.version>
+        <jol-core.version>0.9</jol-core.version>
     </properties>
 
     <dependencyManagement>
@@ -78,6 +80,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.openjdk.jol</groupId>
+                <artifactId>jol-core</artifactId>
+                <version>${jol-core.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
