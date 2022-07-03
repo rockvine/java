@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * @author rocky
  * @date 2022-06-26 16:00
- * @description 无重叠区间
+ * @description 无重叠区间（https://leetcode.cn/problems/non-overlapping-intervals/）
  */
 public class NonOverlappingIntervals {
     public static void main(String[] args) {

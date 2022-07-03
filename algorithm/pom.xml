@@ -11,4 +11,12 @@
 
     <artifactId>algorithm</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.rockvine</groupId>
+            <artifactId>kernel-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
 </project>

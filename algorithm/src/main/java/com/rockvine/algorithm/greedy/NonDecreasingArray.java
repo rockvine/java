@@ -3,7 +3,7 @@ package com.rockvine.algorithm.greedy;
 /**
  * @author rocky
  * @date 2022-06-29 23:24
- * @description 非递减数列
+ * @description 非递减数列（https://leetcode.cn/problems/non-decreasing-array/）
  */
 public class NonDecreasingArray {
     public static void main(String[] args) {

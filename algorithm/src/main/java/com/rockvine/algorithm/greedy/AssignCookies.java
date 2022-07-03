@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author rocky
  * @date 2022-06-24 22:14
- * @description 分发饼干
+ * @description 分发饼干（https://leetcode.cn/problems/assign-cookies/）
  */
 public class AssignCookies {
     public static void main(String[] args) {

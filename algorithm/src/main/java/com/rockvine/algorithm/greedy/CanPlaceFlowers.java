@@ -3,7 +3,7 @@ package com.rockvine.algorithm.greedy;
 /**
  * @author rocky
  * @date 2022-06-26 16:43
- * @description 种花问题
+ * @description 种花问题（https://leetcode.cn/problems/can-place-flowers/）
  */
 public class CanPlaceFlowers {
     public static void main(String[] args) {

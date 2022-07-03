@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * @author rocky
  * @date 2022-06-27 22:08
- * @description 用最少数量的箭引爆气球
+ * @description 用最少数量的箭引爆气球（https://leetcode.cn/problems/minimum-number-of-arrows-to-burst-balloons/）
  */
 public class MinimumNumberOfArrowsToBurstBalloons {
     public static void main(String[] args) {
