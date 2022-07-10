@@ -3,7 +3,7 @@ package com.rockvine.algorithm.twopointers;
 /**
  * @author rocky
  * @date 2022-06-29 23:44
- * @description 环形链表 II（https://leetcode.cn/problems/linked-list-cycle-ii/）
+ * @description 142.环形链表 II（https://leetcode.cn/problems/linked-list-cycle-ii/）
  */
 public class LinkedListCycleII {
     public static void main(String[] args) {

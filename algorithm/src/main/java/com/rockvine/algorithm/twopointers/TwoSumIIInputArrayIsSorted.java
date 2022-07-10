@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author rocky
  * @date 2022-06-29 23:40
- * @description 两数之和 II - 输入有序数组（https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/）
+ * @description 167.两数之和 II - 输入有序数组（https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted/）
  */
 public class TwoSumIIInputArrayIsSorted {
     public static void main(String[] args) {

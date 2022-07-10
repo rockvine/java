@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author rocky
  * @date 2022-06-29 23:41
- * @description 合并两个有序数组（https://leetcode.cn/problems/merge-sorted-array/）
+ * @description 88.合并两个有序数组（https://leetcode.cn/problems/merge-sorted-array/）
  */
 public class MergeSortedArray {
     public static void main(String[] args) {

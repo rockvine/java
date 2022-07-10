@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author rocky
  * @date 2022-07-01 01:01
- * @description 最小覆盖子串（https://leetcode.cn/problems/minimum-window-substring/）
+ * @description 76.最小覆盖子串（https://leetcode.cn/problems/minimum-window-substring/）
  */
 public class MinimumWindowSubstring {
     public static void main(String[] args) {

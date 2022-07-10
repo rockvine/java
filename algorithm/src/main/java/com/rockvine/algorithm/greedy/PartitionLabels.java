@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author rocky
  * @date 2022-06-27 22:11
- * @description 划分字母区间（https://leetcode.cn/problems/partition-labels/）
+ * @description 763.划分字母区间（https://leetcode.cn/problems/partition-labels/）
  */
 public class PartitionLabels {
     public static void main(String[] args) {

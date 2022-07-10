@@ -3,7 +3,7 @@ package com.rockvine.algorithm.twopointers;
 /**
  * @author rocky
  * @date 2022-07-01 01:03
- * @description 平方数之和（https://leetcode.cn/problems/sum-of-square-numbers/）
+ * @description 633.平方数之和（https://leetcode.cn/problems/sum-of-square-numbers/）
  */
 public class SumOfSquareNumbers {
     public static void main(String[] args) {

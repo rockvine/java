@@ -3,7 +3,7 @@ package com.rockvine.algorithm.twopointers;
 /**
  * @author rocky
  * @date 2022-07-03 11:36
- * @description 验证回文字符串 II（https://leetcode.cn/problems/valid-palindrome-ii/）
+ * @description 680.验证回文字符串 II（https://leetcode.cn/problems/valid-palindrome-ii/）
  */
 public class ValidPalindromeII {
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ package com.rockvine.algorithm.greedy;
 /**
  * @author rocky
  * @date 2022-06-27 22:13
- * @description 买卖股票的最佳时机 II（https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/）
+ * @description 122.买卖股票的最佳时机 II（https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/）
  */
 public class BestTimeToBuyAndSellStockII {
     public static void main(String[] args) {

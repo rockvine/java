@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author rocky
  * @date 2022-07-03 11:42
- * @description 至多包含K个不同字符的最长子串（https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters/）
+ * @description 340.至多包含K个不同字符的最长子串（https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters/）
  */
 public class LongestSubstringWithAtMostKDistinctCharacters {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ import java.util.Comparator;
 /**
  * @author rocky
  * @date 2022-06-27 22:14
- * @description 根据身高重建队列（https://leetcode.cn/problems/queue-reconstruction-by-height/）
+ * @description 406.根据身高重建队列（https://leetcode.cn/problems/queue-reconstruction-by-height/）
  */
 public class QueueReconstructionByHeight {
     public static void main(String[] args) {

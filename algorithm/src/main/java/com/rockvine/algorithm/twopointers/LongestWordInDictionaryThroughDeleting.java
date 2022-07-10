@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author rocky
  * @date 2022-07-03 11:38
- * @description 通过删除字母匹配到字典里最长单词（https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/）
+ * @description 524.通过删除字母匹配到字典里最长单词（https://leetcode.cn/problems/longest-word-in-dictionary-through-deleting/）
  */
 public class LongestWordInDictionaryThroughDeleting {
     public static void main(String[] args) {

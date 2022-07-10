@@ -3,7 +3,7 @@ package com.rockvine.algorithm.greedy;
 /**
  * @author rocky
  * @date 2022-06-24 22:17
- * @description 分发糖果（https://leetcode.cn/problems/candy/）
+ * @description 135.分发糖果（https://leetcode.cn/problems/candy/）
  */
 public class Candy {
     public static void main(String[] args) {
