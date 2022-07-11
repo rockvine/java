@@ -2,7 +2,7 @@ package com.rockvine.algorithm.binarysearch;
 
 /**
  * @author rocky
- * @date 2022-07-10 23:58
+ * @date 2022-07-10 21:58
  * @description 4.寻找两个正序数组的中位数（https://leetcode.cn/problems/median-of-two-sorted-arrays/）
  */
 public class MedianOfTwoSortedArrays {

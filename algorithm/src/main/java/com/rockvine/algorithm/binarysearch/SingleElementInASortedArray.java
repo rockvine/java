@@ -2,7 +2,7 @@ package com.rockvine.algorithm.binarysearch;
 
 /**
  * @author rocky
- * @date 2022-07-10 23:56
+ * @date 2022-07-10 21:56
  * @description 540.有序数组中的单一元素（https://leetcode.cn/problems/single-element-in-a-sorted-array/）
  */
 public class SingleElementInASortedArray {
