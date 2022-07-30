@@ -6,7 +6,7 @@ package com.rockvine.concurrency.thread.join;
  * @description join方法示例
  */
 @SuppressWarnings("Convert2Lambda")
-public class App {
+public class JoinApp {
     public static void main(String[] args) throws Exception {
         Thread thread = new Thread(new Runnable() {
             @Override
